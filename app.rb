@@ -17,7 +17,12 @@ get '/random-cat' do
   erb :cat
 end
 
-get '/named-cat' do
+post '/named-cat' do
+  p params
   params.empty? ? @cat_name = "George" : @cat_name = params[:name]
   erb :cat
+end
+
+get '/naming-form' do
+  erb :name_form
 end
