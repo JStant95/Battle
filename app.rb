@@ -5,10 +5,13 @@ get '/' do
 end
 
 get '/secret' do
-  "Hello a Jed"
+  "<h1> JecK Ded </h1>"
 end
 
 get '/about' do
-  "An about page"\n
-  "This is another line"
+  "An about page"
+end
+
+get '/cat' do
+  erb :cat
 end
