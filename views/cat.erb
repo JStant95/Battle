@@ -6,3 +6,17 @@
 
 <h1> My name is <%= @cat_name %> </h1>
 <img src="http://bit.ly/1eze8aE">
+
+<% if @cat_name = "George" %>
+  <form action="/named-cat" method="get">
+    <ul>
+      <li>
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+      </li>
+      <li class="button">
+        <button type="submit" value="Submit">Submit</button>
+      </li>
+    </ul>
+  </form>
+<% end %>
