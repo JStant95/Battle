@@ -13,5 +13,6 @@ get '/about' do
 end
 
 get '/cat' do
+  @cat_name = ["Amigo", "Oscar", "Viking"].sample
   erb :cat
 end
