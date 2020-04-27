@@ -12,7 +12,12 @@ get '/about' do
   "An about page"
 end
 
-get '/cat' do
+get '/random-cat' do
   @cat_name = ["Amigo", "Oscar", "Viking"].sample
+  erb :cat
+end
+
+get '/named-cat' do
+  params.empty? ? @cat_name = "George" : @cat_name = params[:name]
   erb :cat
 end
